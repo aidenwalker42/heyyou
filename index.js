@@ -16,9 +16,11 @@ app.use(express.urlencoded({limit: '16mb', extended: true}));
 app.use(bodyParser.json())
 app.use(cors())
 
-import {router as none} from './routes/api/none.js'
+import {router as customerContact} from './routes/api/customerContact.js'
+import {router as websiteModification} from './routes/api/websiteModification.js'
 
-app.use('/api/none', none)
+app.use('/api/customerContact', customerContact)
+app.use('/api/websiteModification', websiteModification)
 
 // Handle Production (Basically this directs any route to index.html? Which I think vue handles with vue router or whatever)
 
