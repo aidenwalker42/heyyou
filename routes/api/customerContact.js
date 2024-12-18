@@ -1,6 +1,6 @@
 import express from 'express'
 
-import {loadCustomerContactCollection, loadWebsiteModificationCollection} from '../../functions/loadCollections.js';
+import {loadCustomerContactCollection, loadWebsiteModificationCollection} from '../../server/loadCollections.js';
 
 
 const router = express.Router()
@@ -19,5 +19,5 @@ router.post('/', async (req, res) => {
 //Delete Post
 
 
-
-module.exports = router;
+export {router}
+//module.exports = router;
